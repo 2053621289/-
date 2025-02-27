@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的实验页面</title>
+  </head>
+  <body>
+    <h1>我是标题</h1>
+    <p>这是一段文字，<span style="color: rgb(228, 22, 169);">点击下面图片</span>播放音乐</p>
+      <img 
+       id="playBtn"
+       src="43c66126126620e28657e7704e89037d.jpg" 
+       alt="播放音乐Ticking Away" 
+       onclick="togglePlay()"
+       style="cursor: pointer;border: none; background: none;"
+       width="200" 
+       height="200">
+    <audio id="myAudio">
+      <source src="付费音乐/Ticking Away - VALORANT,Grabbitz,bbno$.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      // 获取音频和按钮元素
+      const audio = document.getElementById("myAudio");
+      const playBtn = document.getElementById("playBtn");
+      // 播放/暂停切换函数
+      function togglePlay() {
+        if (audio.paused) { // 如果当前是暂停状态
+          audio.play();     // 播放音频
+          playBtn.src = "43c66126126620e28657e7704e89037d.jpg"; // 切换为暂停图标
+        } else {
+          audio.pause();    // 暂停音频
+          playBtn.src = "43c66126126620e28657e7704e89037d.jpg";  // 切换为播放图标
+          }}
+  </script>
+  </body>
+</html>
